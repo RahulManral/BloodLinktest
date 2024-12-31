@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "api/json-server.js": {
-      "runtime": "nodejs16.x"
-    }
-  },
     "rewrites": [
       { "source": "/(.*)", "destination": "/" }
     ],
