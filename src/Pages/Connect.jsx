@@ -9,7 +9,7 @@ const ConnectPage = () => {
   useEffect(() => {
     const fetchDonors = async () => {
       try {
-        const response = await fetch('db.json');
+        const response = await fetch('');
         const data = await response.json();
         setDonors(data.donors);
       } catch (error) {
