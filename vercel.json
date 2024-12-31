@@ -1,13 +1,14 @@
 {
+  "version": 2,
   "functions": {
     "api/json-server.js": {
       "runtime": "nodejs20.x"
     }
   },
-
-  "rewrites": [
-    { "source": "/(.*)", 
-    "destination": "/" 
-  }
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/json-server.js"
+    }
   ]
 }

@@ -17,7 +17,7 @@ const DeleteData = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3001/donors', {
+            const response = await fetch('api/donors', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ const DeleteData = () => {
             const donorToDelete = donors.find(donor => donor.name === formData.name && donor.phone === formData.phone);
 
             if (donorToDelete) {
-                const deleteResponse = await fetch(`http://localhost:8080/donors/${donorToDelete.id}`, {
+                const deleteResponse = await fetch(`api/donors/${donorToDelete.id}`, {
                     method: 'DELETE',
                 });
 

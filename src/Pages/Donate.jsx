@@ -18,7 +18,7 @@ const Donate = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3001/donors', {
+            const response = await fetch('api/donors', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
