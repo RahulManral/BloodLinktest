@@ -1,8 +1,7 @@
 {
-  "version": 2,
   "functions": {
     "api/json-server.js": {
-      "runtime": "nodejs20.x"
+      "runtime": "vercel-nodejs@2.0.0"
     }
   },
   "routes": [
