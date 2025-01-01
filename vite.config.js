@@ -1,12 +1,15 @@
-const { createServer } = require('json-server');
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-const server = createServer();
-const router = require('json-server').router('db.json');
-const middlewares = require('json-server').defaults();
-
-server.use(middlewares);
-server.use(router);
-
-server.listen(process.env.PORT || 3001, () => {
-  console.log('JSON Server is running');
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });

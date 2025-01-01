@@ -17,7 +17,7 @@ const DeleteData = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('api/donors', {
+            const response = await fetch('/api/donors', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
